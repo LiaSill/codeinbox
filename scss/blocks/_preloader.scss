@@ -1,0 +1,24 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: $color-steel-blue-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease, visibility 1s ease; 
+  opacity: 1; 
+  visibility: visible;
+
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+
+  &__gif {
+    width: 1000px;
+  }
+}

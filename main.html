@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Код В Квадрате</title>
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <img class="preloader__gif" src="assets/cat_loader.gif" alt="Загрузка">
+  </div>
+  <script>
+    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.classList.add("hide");
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 1000)
+      }, 2000);
+    })
+  </script>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__main-link" href="main.html" aria-label="Ссылка на главную страницу">
+          <svg class="header__icon-paw-main" width="68" height="60" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-paw-main-1"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+    </div>
+  </footer>
+</body>
+
+</html>
