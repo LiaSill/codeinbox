@@ -413,6 +413,10 @@ a {
 }
 .preloader__gif {
   width: 1000px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .header {

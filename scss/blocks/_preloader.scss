@@ -20,5 +20,7 @@
 
   &__gif {
     width: 1000px;
+    user-select: none;
+    pointer-events: none;
   }
 }
