@@ -1,0 +1,70 @@
+.main-page {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    position: relative;
+  }
+
+
+  &__icon-pawprint,
+  &__icon-sun,
+  &__icon-cat-smiling {
+    position: absolute;
+    z-index: 1;
+  }
+
+
+  &__icon-pawprint {
+    bottom: 37px;
+    left: 90px;
+  }
+
+
+  &__icon-sun {
+    top: 0px;
+    right: 40px;
+  }
+
+
+  &__icon-cat-smiling {
+    right: 274px;
+    bottom: -22px;
+  }
+
+
+  &__game-preshow {
+    display: block;
+    width: 1065px;
+    height: 600px;
+    border: 14px solid $color-ink-blue;
+    border-radius: 43px;
+    background-color: $color-baby-blue;
+  }
+
+
+  &__codebox-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  &__box {
+    width: 166px;
+    height: 166px;
+    background-color: $color-dusty-blue;
+    border: 14px solid $color-deep-sapphire;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &--secret {
+      background-color: $color-baby-blue;
+      border-color: $color-ink-blue;
+    }
+  }
+}

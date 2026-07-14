@@ -1,4 +1,20 @@
 .header {
-  padding: 15px 0;
+  padding: 10px 0;
   background-color: $color-ink-blue;
+
+  &__icon-paw-main {
+    color: $color-colorsteel-ironsand;
+  }
+
+  &__main-link {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+
+    &:hover {
+      .header__icon-paw-main {
+        color: $color-vibrant-orange;
+      }
+    }
+  }
 }
