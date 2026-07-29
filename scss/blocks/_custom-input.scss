@@ -1,0 +1,20 @@
+.custom-input {
+
+  &__field {
+    font-size: 26pt;
+    color: $color-deep-sapphire;
+    padding: 11px 89px;
+    border: 10px solid $color-ink-blue;
+    border-radius: 50px;
+    background-color: $color-baby-blue;
+    outline: none;
+
+    &::placeholder {
+      color: $color-cyan-blue;
+    }
+
+    &:hover {
+      border-color: $color-light-blue;
+    }
+  }
+}

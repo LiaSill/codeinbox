@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <title>Код В Квадрате</title>
 </head>
 
@@ -13,17 +16,6 @@
   <div class="preloader" id="preloader">
     <img class="preloader__gif" src="assets/cat_loader.gif" alt="Загрузка">
   </div>
-  <script>
-    window.addEventListener("load", function () {
-      const preloader = document.getElementById("preloader");
-      setTimeout(() => {
-        preloader.classList.add("hide");
-        setTimeout(() => {
-          preloader.style.display = "none";
-        }, 1000)
-      }, 2000);
-    })
-  </script>
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -79,22 +71,40 @@
           <svg class="main-page__icon-sun" width="275" height="275" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-sun"></use>
           </svg>
-          <svg class="main-page__icon-cat-smiling" width="187" height="187" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-cat-smiling"></use>
-          </svg>
         </div>
       </div>
     </section>
   </main>
   <div class="dialog-overlay" id="dialog">
-    <div class="dialoge-box">
-      
+    <div class="dialog-box">
+      <img class="dialog-box__cat-img" id="cat-sprite" src="images/cat-dialog-1.png" width="180" height="230"
+        alt="Кот Рудис">
+      <div class="dialog-box__picture">
+        <picture>
+          <img class="dialog-box__image" src="images/dialog-bg.png" width="1691" height="413" alt="Фон диалога">
+        </picture>
+      </div>
+      <div class="dialog-box__content">
+        <p class="dialog-box__text" id="dialog-text"></p>
+        <div class="custom-input" id="name-container" hidden>
+          <input class="custom-input__field" id="name" type="text" name="user-name" placeholder="Введи своё имя..."  maxlength="20">
+        </div>
+      </div>
+      <button class="dialog-box__btn btn" id="next-btn">
+        <svg class="dialog-box__icon-paw-btn" width="231" height="220" aria-hidden="true">
+          <use xlink:href="images/sprite.svg#icon-paw-btn"></use>
+        </svg>
+      </button>
     </div>
   </div>
   <footer class="footer">
     <div class="container">
+      <svg class="footer__icon-cat-smiling" width="187" height="187" aria-hidden="true">
+        <use xlink:href="images/sprite.svg#icon-cat-smiling"></use>
+      </svg>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

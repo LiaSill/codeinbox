@@ -1,0 +1,67 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(33, 68, 85, 0.81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+
+.dialog-box {
+  position: relative;
+
+
+  &__cat-img {
+    user-select: none;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  &__content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 250px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+  &__text {
+    user-select: none;
+    margin: 0;
+    font-family: "Days One";
+    font-size: 64px;
+    color: $color-white;
+  }
+
+
+  &__btn {
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    &:hover {
+      .dialog-box__icon-paw-btn {
+        color: $color-vibrant-orange;
+      }
+    }
+  }
+
+
+  &__icon-paw-btn {
+    color: $color-colorsteel-ironsand;
+  }
+}

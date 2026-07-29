@@ -1,4 +1,14 @@
 .footer {
   height: 50px;
   background-color: $color-ink-blue;
+  position: relative;
+
+
+  &__icon-cat-smiling {
+    position: absolute;
+    z-index: 1;
+    right: 11%;
+    top: -140%;
+    transform: translateY(-50%);
+  }
 }

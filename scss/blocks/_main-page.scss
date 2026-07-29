@@ -9,28 +9,21 @@
 
 
   &__icon-pawprint,
-  &__icon-sun,
-  &__icon-cat-smiling {
+  &__icon-sun {
     position: absolute;
     z-index: 1;
   }
 
 
   &__icon-pawprint {
-    bottom: 37px;
-    left: 90px;
+    bottom: 12%;
+    left: 4%;
   }
 
 
   &__icon-sun {
-    top: 0px;
-    right: 40px;
-  }
-
-
-  &__icon-cat-smiling {
-    right: 274px;
-    bottom: -22px;
+    top: 0%;
+    right: 3%;
   }
 
 
