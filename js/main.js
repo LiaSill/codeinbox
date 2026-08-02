@@ -22,7 +22,7 @@ const nameInput = document.getElementById("name");
 
 const dialogs = [
   {
-    text: "Привет! Меня зовут кот Рудис. Давай поиграем!",
+    text: "Привет! Меня зовут кот Рудис.\nДавай поиграем!",
     sprite: "images/cat-dialog-1.png"
   },
   {
@@ -34,7 +34,7 @@ const dialogs = [
     sprite: "images/cat-dialog-3.png"
   },
   {
-    text: "Я загадал для тебя код! Реши задачки, чтобы узнать его!",
+    text: "Будем мы с тобой играть,\nЦифры кода узнавать!",
     sprite: "images/cat-dialog-4.png"
   }
 ];
@@ -53,7 +53,7 @@ function showDialog(step) {
         case 2:
             nameContainer.hidden = true;
             dialogText.textContent =
-                `Приятно познакомиться, ${playerName}!`;
+                `Приятно познакомиться,\n${playerName}!`;
             break;
 
         default:

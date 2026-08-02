@@ -445,6 +445,8 @@ a {
   justify-content: center;
 }
 .dialog-box__text {
+  white-space: pre-wrap;
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -491,15 +493,18 @@ a {
   gap: 28px;
   position: relative;
 }
-.main-page__icon-pawprint, .main-page__icon-sun {
+.main-page__pawprint-img, .main-page__sun-img {
   position: absolute;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.main-page__icon-pawprint {
+.main-page__pawprint-img {
   bottom: 12%;
   left: 4%;
 }
-.main-page__icon-sun {
+.main-page__sun-img {
   top: 0%;
   right: 3%;
 }
@@ -555,9 +560,12 @@ a {
   background-color: #0A4A69;
   position: relative;
 }
-.footer__icon-cat-smiling {
+.footer__cat-smiling-img {
   position: absolute;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   right: 11%;
   top: -140%;
   transform: translateY(-50%);

@@ -8,20 +8,21 @@
   }
 
 
-  &__icon-pawprint,
-  &__icon-sun {
+  &__pawprint-img,
+  &__sun-img {
     position: absolute;
     z-index: 1;
+    user-select: none;
   }
 
 
-  &__icon-pawprint {
+  &__pawprint-img {
     bottom: 12%;
     left: 4%;
   }
 
 
-  &__icon-sun {
+  &__sun-img {
     top: 0%;
     right: 3%;
   }
