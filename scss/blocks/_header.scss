@@ -19,6 +19,10 @@
     }
   }
 
+  &__icon-paw-main-active {
+    display: none;
+  }
+
   &__main-link {
     display: flex;
     width: fit-content;
@@ -30,7 +34,17 @@
       outline: none;
 
       .header__icon-paw-main {
-        color: $color-vibrant-orange;
+        display: none;
+      }
+
+      .header__icon-paw-main-active {
+        display: block;
+        height: 60px;
+
+        @include vp-767 {
+          width: 35px;
+          height: 32px;
+        }
       }
     }
   }
