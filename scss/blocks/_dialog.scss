@@ -19,11 +19,22 @@
     top: -20%;
     left: 50%;
     transform: translateX(-50%);
+
+    @include vp-767 {
+      top: -10%;
+      width: 104px;
+      height: 133px;
+    }
   }
 
 
   &__image {
     user-select: none;
+
+    @include vp-767 {
+      width: 312px;
+      aspect-ratio: 312/391;
+    }
   }
 
 
@@ -39,6 +50,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include vp-767 {
+    top: 30%;
+    padding: 0 20px;
+  }
   }
 
 
@@ -50,6 +66,10 @@
     font-family: "Days One";
     font-size: 64px;
     color: $color-white;
+
+    @include vp-767 {
+      font-size: 24pt;
+    }
   }
 
 
@@ -59,6 +79,12 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @include vp-767 {
+      width: 122px;
+      height: 116px;
+      bottom: -10%
+    }
+
 
     &:hover,
     &:focus-visible {
@@ -66,7 +92,7 @@
         display: none;
       }
 
-      .dialog-box__paw-btn-active {
+      .dialog-box__paw-btn--active {
         display: block;
         user-select: none;
       }
@@ -74,7 +100,7 @@
   }
 
 
-  &__paw-btn-active {
+  &__paw-btn--active {
     display: none;
   }
 }

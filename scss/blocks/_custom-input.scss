@@ -9,6 +9,14 @@
     background-color: $color-baby-blue;
     outline: none;
 
+    @include vp-767 {
+      font-size: 15px;
+      border-radius: 35px;
+      border-width: 6px;
+      padding: 11px 0;
+      text-align: center;
+    }
+
     &::placeholder {
       color: $color-cyan-blue;
     }

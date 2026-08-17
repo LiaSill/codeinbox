@@ -431,10 +431,23 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 767px) {
+  .dialog-box__cat-img {
+    top: -10%;
+    width: 104px;
+    height: 133px;
+  }
+}
 .dialog-box__image {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media (max-width: 767px) {
+  .dialog-box__image {
+    width: 312px;
+    aspect-ratio: 312/391;
+  }
 }
 .dialog-box__content {
   position: absolute;
@@ -449,6 +462,12 @@ a {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .dialog-box__content {
+    top: 30%;
+    padding: 0 20px;
+  }
+}
 .dialog-box__text {
   white-space: pre-wrap;
   text-align: center;
@@ -460,22 +479,34 @@ a {
   font-size: 64px;
   color: #FFFFFF;
 }
+@media (max-width: 767px) {
+  .dialog-box__text {
+    font-size: 24pt;
+  }
+}
 .dialog-box__btn {
   position: absolute;
   bottom: -35%;
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 767px) {
+  .dialog-box__btn {
+    width: 122px;
+    height: 116px;
+    bottom: -10%;
+  }
+}
 .dialog-box__btn:hover .dialog-box__paw-btn, .dialog-box__btn:focus-visible .dialog-box__paw-btn {
   display: none;
 }
-.dialog-box__btn:hover .dialog-box__paw-btn-active, .dialog-box__btn:focus-visible .dialog-box__paw-btn-active {
+.dialog-box__btn:hover .dialog-box__paw-btn--active, .dialog-box__btn:focus-visible .dialog-box__paw-btn--active {
   display: block;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.dialog-box__paw-btn-active {
+.dialog-box__paw-btn--active {
   display: none;
 }
 
@@ -495,14 +526,14 @@ a {
   color: #43413F;
   flex-shrink: 0;
 }
+.header__icon-paw-main--active {
+  display: none;
+}
 @media (max-width: 767px) {
   .header__icon-paw-main {
     width: 35px;
     height: 32px;
   }
-}
-.header__icon-paw-main-active {
-  display: none;
 }
 .header__main-link {
   display: flex;
@@ -517,15 +548,8 @@ a {
 .header__main-link:hover .header__icon-paw-main, .header__main-link:focus .header__icon-paw-main, .header__main-link:focus-visible .header__icon-paw-main {
   display: none;
 }
-.header__main-link:hover .header__icon-paw-main-active, .header__main-link:focus .header__icon-paw-main-active, .header__main-link:focus-visible .header__icon-paw-main-active {
+.header__main-link:hover .header__icon-paw-main--active, .header__main-link:focus .header__icon-paw-main--active, .header__main-link:focus-visible .header__icon-paw-main--active {
   display: block;
-  height: 60px;
-}
-@media (max-width: 767px) {
-  .header__main-link:hover .header__icon-paw-main-active, .header__main-link:focus .header__icon-paw-main-active, .header__main-link:focus-visible .header__icon-paw-main-active {
-    width: 35px;
-    height: 32px;
-  }
 }
 
 .main-page__wrapper {
@@ -631,6 +655,15 @@ a {
   border-radius: 50px;
   background-color: #90C9F3;
   outline: none;
+}
+@media (max-width: 767px) {
+  .custom-input__field {
+    font-size: 15px;
+    border-radius: 35px;
+    border-width: 6px;
+    padding: 11px 0;
+    text-align: center;
+  }
 }
 .custom-input__field::-moz-placeholder {
   color: #366074;
