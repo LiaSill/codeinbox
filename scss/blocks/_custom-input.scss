@@ -13,7 +13,9 @@
       color: $color-cyan-blue;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       border-color: $color-light-blue;
     }
   }

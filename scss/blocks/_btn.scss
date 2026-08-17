@@ -12,4 +12,9 @@
   background-color: none;
   border-radius: 8px;
   cursor: pointer;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
 }

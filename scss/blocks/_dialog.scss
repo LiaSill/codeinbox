@@ -22,6 +22,11 @@
   }
 
 
+  &__image {
+    user-select: none;
+  }
+
+
   &__content {
   position: absolute;
   top: 35%;
@@ -55,15 +60,21 @@
     transform: translateX(-50%);
 
 
-    &:hover {
-      .dialog-box__icon-paw-btn {
-        color: $color-vibrant-orange;
+    &:hover,
+    &:focus-visible {
+      .dialog-box__paw-btn {
+        display: none;
+      }
+
+      .dialog-box__paw-btn-active {
+        display: block;
+        user-select: none;
       }
     }
   }
 
 
-  &__icon-paw-btn {
-    color: $color-colorsteel-ironsand;
+  &__paw-btn-active {
+    display: none;
   }
 }
