@@ -1,1 +1,136 @@
-<h1>УРА ВСЕ РАБОТАЕТ!!</h1>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+  <title>Код В Квадрате</title>
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <img class="preloader__gif" src="assets/cat_loader.gif" alt="Загрузка">
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__main-link" href="index.html" aria-label="Ссылка на главную страницу">
+          <img class="header__icon-paw-main" src="images/paw-main.png" width="68" height="60" alt="">
+          <img class="header__icon-paw-main header__icon-paw-main--active" src="images/paw-main-active.png" width="68"
+            height="60" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="game">
+      <div class="container">
+        <h1 class="visually-hidden">Код в Квадрате - Игра "Посчитай рыбок"</h1>
+        <div class="game__field">
+          <button class="game__fish game__fish--1 btn" data-number="1">
+            <img class="game__img" src="images/fish-1.png" width="221" height="169" alt="Рыбка с цифрой 1">
+          </button>
+          <button class="game__fish game__fish--2 btn" data-number="2">
+            <img class="game__img" src="images/fish-2.png" width="160" height="110" alt="Рыбка с цифрой 2">
+          </button>
+          <button class="game__fish game__fish--3 btn" data-number="3">
+            <img class="game__img" src="images/fish-3.png" width="171" height="144" alt="Рыбка с цифрой 3">
+          </button>
+          <button class="game__fish game__fish--4 btn" data-number="4">
+            <img class="game__img" src="images/fish-4.png" width="180" height="130" alt="Рыбка с цифрой 4">
+          </button>
+          <button class="game__fish game__fish--5 btn" data-number="5">
+            <img class="game__img" src="images/fish-5.png" width="216" height="204" alt="Рыбка с цифрой 5">
+          </button>
+          <button class="game__fish game__fish--6 btn" data-number="6">
+            <img class="game__img" src="images/fish-6.png" width="209" height="121" alt="Рыбка с цифрой 6">
+          </button>
+          <button class="game__fish game__fish--7 btn" data-number="7">
+            <img class="game__img" src="images/fish-7.png" width="180" height="150" alt="Рыбка с цифрой 7">
+          </button>
+          <button class="game__fish game__fish--8 btn" data-number="8">
+            <img class="game__img" src="images/fish-8.png" width="162" height="108" alt="Рыбка с цифрой 8">
+          </button>
+          <button class="game__fish game__fish--9 btn" data-number="9">
+            <img class="game__img" src="images/fish-9.png" width="198" height="108" alt="Рыбка с цифрой 9">
+          </button>
+          <button class="game__fish game__fish--10 btn" data-number="10">
+            <img class="game__img" src="images/fish-10.png" width="345" height="240" alt="Рыбка с цифрой 10">
+          </button>
+          <div class="game__result visually-hidden" id="result">
+            <div class="game__picture">
+              <picture>
+                <source media="(max-width: 767px)" srcset="">
+                <img class="game__result-bg-image" src="images/fish-result-bg.png" width="1308" height="366" alt="Фон диалога">
+              </picture>
+            </div>
+            <div class="game__result-content">
+              <img class="game__result-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
+              <p class="game__result-text">Ура, ты нашёл первую цифру кода!</p>
+              <ul class="codebox__list">
+                <li class="codebox__item">
+                  <div class="codebox__box codebox__box--secret">
+                    <span class="codebox__code">7</span>
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box">
+                    <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box">
+                    <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box">
+                    <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                  </div>
+                </li>
+              </ul>
+              <a class="game__result-link" href="index.html" aria-label="Ссылка на главную страницу">
+                <img class="game__result-link-img" src="images/paw-btn.png" alt="">
+                <img class="game__result-link-img game__result-link-img--active" src="images/paw-btn-active.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="dialog-overlay" id="fishDialog">
+    <div class="dialog-box">
+      <img class="dialog-box__cat-img" id="fishCat-sprite" src="images/cat-dialog-1.png" width="180" height="230"
+        alt="Кот Рудис">
+      <div class="dialog-box__picture">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/dialog-bg-mobile.png">
+          <img class="dialog-box__image" src="images/dialog-bg.png" width="1691" height="413" alt="Фон диалога">
+        </picture>
+      </div>
+      <div class="dialog-box__content">
+        <p class="dialog-box__text" id="fishDialog-text"></p>
+      </div>
+      <button class="dialog-box__btn btn" id="fishNext-btn">
+        <img class="dialog-box__paw-btn" src="images/paw-btn.png" width="231" height="220" alt="Кнопка-лапка">
+        <img class="dialog-box__paw-btn dialog-box__paw-btn--active" src="images/paw-btn-active.png" width="231"
+          height="220" alt="Кнопка-лапка активная">
+      </button>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+
+    </div>
+  </footer>
+  <script src="js/fish.js"></script>
+</body>
+
+</html>

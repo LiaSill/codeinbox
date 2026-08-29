@@ -1,5 +1,4 @@
 .main-page {
-  // height: 100vh;
 
   &__wrapper {
     display: flex;
@@ -20,7 +19,7 @@
 
   &__pawprint-img {
     bottom: 12%;
-    left: 4%;
+    left: 0%;
 
     @include vp-767 {
       display: none;
@@ -30,7 +29,7 @@
 
   &__sun-img {
     top: 0%;
-    right: 3%;
+    right: 0%;
 
     @include vp-767 {
       display: none;
@@ -40,8 +39,8 @@
 
   &__game-link {
     display: block;
-    min-width: 1070px;
-    min-height: 600px;
+    width: 90%;
+    max-width: 1070px;
     aspect-ratio: 1070/600;
     border: 14px solid $color-ink-blue;
     border-radius: 43px;
@@ -51,7 +50,7 @@
     background-size: cover;
 
     @include vp-767 {
-      min-width: 95%;
+      width: 95%;
       aspect-ratio: 300/500;
       border-width: 8px;
       background-image: url("../images/preshow-mobile-1.png");
@@ -61,54 +60,6 @@
     &:focus-visible {
       border-color: $color-baby-blue;
       outline: none;
-    }
-  }
-
-
-  &__codebox-list {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-
-  &__box {
-    width: 166px;
-    height: 166px;
-    background-color: $color-dusty-blue;
-    border: 14px solid $color-deep-sapphire;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    @include vp-767 {
-      width: 75px;
-      height: 75px;
-      border-width: 7px;
-    }
-
-
-    &--secret {
-      background-color: $color-baby-blue;
-      border-color: $color-ink-blue;
-    }
-  }
-
-
-  &__icon-question-mark {
-    @include vp-767 {
-      width: 19px;
-      height: 30px;
-    }
-  }
-
-
-  &__icon-lock {
-    @include vp-767 {
-      width: 28px;
-      height: 34px;
     }
   }
 }
