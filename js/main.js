@@ -39,6 +39,7 @@ const indexNextBtn = document.getElementById("indexNext-btn");
 const indexDialog = document.getElementById("indexDialog");
 const nameContainer = document.getElementById("name-container");
 const nameInput = document.getElementById("name");
+const indexTip = document.getElementById("dialogTip");
 
 const indexDialogs = [
   {
@@ -104,6 +105,7 @@ indexNextBtn.onclick = async () => {
 
     if (currentIndexDialog === 0 && !firstIndexDialogPlayed) {
       firstIndexDialogPlayed = true;
+      indexTip.classList.add("visually-hidden");
       indexNextBtn.disabled = true;
       bgMainMusic.volume = 0.1;
       bgMainMusic.play().catch(() => {});

@@ -13,6 +13,13 @@
     background-position: center;
     border: 14px solid $color-ink-blue;
     border-radius: 43px;
+
+    @include vp-767 {
+      width: 95%;
+      aspect-ratio: 320 / 611;
+      background-image: url("../images/game-1-bg-mobile.png");
+      border-width: 8px;
+    }
   }
 
   &__fish {
@@ -41,128 +48,117 @@
 
     &--1 {
       top: 15%;
-      left: 10%
+      left: 10%;
+
+      @include vp-767 {
+        width: 25%;
+        top: 10%;
+        left: 10%;
+      }
     }
 
     &--2 {
       top: 14%;
-      right: 25%
+      right: 25%;
+
+      @include vp-767 {
+        width: 20%;
+        top: 10%;
+        right: 20%;
+      }
     }
 
     &--3 {
       bottom: 0%;
-      left: 35%
+      left: 35%;
+
+      @include vp-767 {
+        width: 28%;
+        bottom: -5%;
+        left: 23%;
+      }
     }
 
     &--4 {
       top: 19%;
-      left: 35%
+      left: 35%;
+
+      @include vp-767 {
+        width: 30%;
+        top: 24%;
+        left: 30%;
+      }
     }
 
     &--5 {
       bottom: 10%;
-      right: 14%
+      right: 14%;
+
+      @include vp-767 {
+        width: 22%;
+        top: 30%;
+        right: 10%;
+      }
     }
 
     &--6 {
       top: 45%;
-      left: 13%
+      left: 13%;
+
+      @include vp-767 {
+        width: 32%;
+        top: 38%;
+        left: 13%;
+      }
     }
 
     &--7 {
       top: 31%;
-      right: 7%
+      right: 7%;
+
+      @include vp-767 {
+        width: 21%;
+        top: 72%;
+        right: 43%;
+      }
     }
 
     &--8 {
       bottom: 15%;
-      left: 14%
+      left: 14%;
+
+      @include vp-767 {
+        width: 23%;
+        bottom: 15%;
+        left: 6%;
+      }
     }
 
     &--9 {
       right: 15%;
-      bottom: 0%
+      bottom: 0%;
+
+      @include vp-767 {
+        width: 42%;
+        right: 5%;
+        bottom: 5%;
+      }
     }
 
     &--10 {
       top: 50%;
-      left: 40%
+      left: 40%;
+
+      @include vp-767 {
+        width: 55%;
+        top: 55%;
+        left: 25%;
+      }
     }
   }
 
   &__img {
     display: block;
     width: 100%;
-  }
-
-  &__result {
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    background-color: rgba(33, 68, 85, 0.81);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  &__result-content {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    padding: 0 100px;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__result-img {
-    user-select: none;
-    position: absolute;
-    top: -105%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &__result-bg-image {
-    user-select: none;
-  }
-
-  &__result-text {
-    white-space: pre-wrap;
-    text-align: center;
-    user-select: none;
-    margin: 0;
-    font-family: "Days One";
-    font-size: 56px;
-    color: $color-white;
-  }
-
-  &__result-link {
-    z-index: 5;
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    bottom: -93%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &:hover {
-      .game__result-link-img {
-        display: none;
-      }
-
-      .game__result-link-img--active {
-        display: block;
-      }
-    }
-  }
-
-  &__result-link-img--active {
-    display: none;
   }
 }

@@ -47,6 +47,7 @@ const fishDialogText = document.getElementById("fishDialog-text");
 const fishCatSprite = document.getElementById("fishCat-sprite");
 const fishNextBtn = document.getElementById("fishNext-btn");
 const fishDialog = document.getElementById("fishDialog");
+const fishTip = document.getElementById("dialogTip");
 
 const fishDialogs = [
   {
@@ -85,6 +86,7 @@ fishNextBtn.onclick = async () => {
 
     if (currentFishDialog === 0 && !firstFishDialogPlayed) {
       firstFishDialogPlayed = true;
+      fishTip.classList.add("visually-hidden");
       // fishNextBtn.disabled = true;
       bgFishMusic.volume = 0.1;
       bgFishMusic.play().catch(() => {});

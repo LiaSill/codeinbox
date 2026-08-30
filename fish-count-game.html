@@ -63,16 +63,16 @@
           <button class="game__fish game__fish--10 btn" data-number="10">
             <img class="game__img" src="images/fish-10.png" width="345" height="240" alt="Рыбка с цифрой 10">
           </button>
-          <div class="game__result visually-hidden" id="result">
-            <div class="game__picture">
+          <div class="result visually-hidden" id="result">
+            <div class="result__picture">
               <picture>
-                <source media="(max-width: 767px)" srcset="">
-                <img class="game__result-bg-image" src="images/fish-result-bg.png" width="1308" height="366" alt="Фон диалога">
+                <source media="(max-width: 767px)" srcset="images/fish-result-bg-mobile.png">
+                <img class="result__bg-image" src="images/fish-result-bg.png" width="1308" height="366" alt="Фон диалога">
               </picture>
             </div>
-            <div class="game__result-content">
-              <img class="game__result-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
-              <p class="game__result-text">Ура, ты нашёл первую цифру кода!</p>
+            <div class="result__content">
+              <img class="result__cat-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
+              <p class="result__text">Ура, ты нашёл первую цифру кода!</p>
               <ul class="codebox__list">
                 <li class="codebox__item">
                   <div class="codebox__box codebox__box--secret">
@@ -95,9 +95,9 @@
                   </div>
                 </li>
               </ul>
-              <a class="game__result-link" href="index.html" aria-label="Ссылка на главную страницу">
-                <img class="game__result-link-img" src="images/paw-btn.png" alt="">
-                <img class="game__result-link-img game__result-link-img--active" src="images/paw-btn-active.png" alt="">
+              <a class="result__link" href="index.html" aria-label="Ссылка на главную страницу">
+                <img class="result__link-img" src="images/paw-btn.png" alt="">
+                <img class="result__link-img result__link-img--active" src="images/paw-btn-active.png" alt="">
               </a>
             </div>
           </div>
@@ -123,6 +123,7 @@
         <img class="dialog-box__paw-btn dialog-box__paw-btn--active" src="images/paw-btn-active.png" width="231"
           height="220" alt="Кнопка-лапка активная">
       </button>
+      <p class="dialog-box__tip" id="dialogTip">Нажми на лапку!</p>
     </div>
   </div>
   <footer class="footer">

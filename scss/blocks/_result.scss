@@ -1,0 +1,97 @@
+.result {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(33, 68, 85, 0.81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include vp-767 {
+    border-radius: 33px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include vp-767 {
+      top: 30%;
+      gap: 20px;
+    }
+  }
+
+  &__cat-img {
+    user-select: none;
+    position: absolute;
+    top: -105%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include vp-767 {
+      top: -60%;
+      width: 35%;
+    }
+  }
+
+  &__bg-image {
+    user-select: none;
+
+    @include vp-767 {
+     width: 70vw;
+    }
+  }
+
+  &__text {
+    white-space: pre-wrap;
+    text-align: center;
+    user-select: none;
+    margin: 0;
+    font-family: "Days One";
+    font-size: 56px;
+    color: $color-white;
+
+    @include vp-767 {
+      font-size: 45px;
+    }
+  }
+
+  &__link {
+    z-index: 5;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: -93%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include vp-767 {
+      width: 35%;
+      bottom: -50%
+    }
+
+    &:hover {
+      .result__link-img {
+        display: none;
+      }
+
+      .result__link-img--active {
+        display: block;
+      }
+    }
+  }
+
+  &__link-img--active {
+    display: none;
+  }
+}

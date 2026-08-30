@@ -103,4 +103,20 @@
   &__paw-btn--active {
     display: none;
   }
+
+  &__tip {
+    position: absolute;
+    user-select: none;
+    text-align: center;
+    color: $color-white;
+    font-size: 50px;
+    bottom: -55%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include vp-767 {
+      font-size: 25px;
+      bottom: -30%;
+    }
+  }
 }

@@ -556,6 +556,24 @@ a {
 .dialog-box__paw-btn--active {
   display: none;
 }
+.dialog-box__tip {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 50px;
+  bottom: -55%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .dialog-box__tip {
+    font-size: 25px;
+    bottom: -30%;
+  }
+}
 
 .header {
   padding: 10px 0;
@@ -637,7 +655,7 @@ a {
 }
 @media (max-width: 767px) {
   .codebox__code {
-    font-size: 24pt;
+    font-size: 55px;
   }
 }
 @media (max-width: 767px) {
@@ -651,6 +669,106 @@ a {
     width: 28px;
     height: 34px;
   }
+}
+
+.result {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(33, 68, 85, 0.81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .result {
+    border-radius: 33px;
+  }
+}
+.result__content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 100px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .result__content {
+    top: 30%;
+    gap: 20px;
+  }
+}
+.result__cat-img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: -105%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .result__cat-img {
+    top: -60%;
+    width: 35%;
+  }
+}
+.result__bg-image {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media (max-width: 767px) {
+  .result__bg-image {
+    width: 70vw;
+  }
+}
+.result__text {
+  white-space: pre-wrap;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin: 0;
+  font-family: "Days One";
+  font-size: 56px;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .result__text {
+    font-size: 45px;
+  }
+}
+.result__link {
+  z-index: 5;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  bottom: -93%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .result__link {
+    width: 35%;
+    bottom: -50%;
+  }
+}
+.result__link:hover .result__link-img {
+  display: none;
+}
+.result__link:hover .result__link-img--active {
+  display: block;
+}
+.result__link-img--active {
+  display: none;
 }
 
 .main-page__wrapper {
@@ -726,6 +844,14 @@ a {
   border: 14px solid #0A4A69;
   border-radius: 43px;
 }
+@media (max-width: 767px) {
+  .game__field {
+    width: 95%;
+    aspect-ratio: 320/611;
+    background-image: url("../images/game-1-bg-mobile.png");
+    border-width: 8px;
+  }
+}
 .game__fish {
   position: absolute;
   padding: 0;
@@ -749,111 +875,115 @@ a {
   top: 15%;
   left: 10%;
 }
+@media (max-width: 767px) {
+  .game__fish--1 {
+    width: 25%;
+    top: 10%;
+    left: 10%;
+  }
+}
 .game__fish--2 {
   top: 14%;
   right: 25%;
+}
+@media (max-width: 767px) {
+  .game__fish--2 {
+    width: 20%;
+    top: 10%;
+    right: 20%;
+  }
 }
 .game__fish--3 {
   bottom: 0%;
   left: 35%;
 }
+@media (max-width: 767px) {
+  .game__fish--3 {
+    width: 28%;
+    bottom: -5%;
+    left: 23%;
+  }
+}
 .game__fish--4 {
   top: 19%;
   left: 35%;
+}
+@media (max-width: 767px) {
+  .game__fish--4 {
+    width: 30%;
+    top: 24%;
+    left: 30%;
+  }
 }
 .game__fish--5 {
   bottom: 10%;
   right: 14%;
 }
+@media (max-width: 767px) {
+  .game__fish--5 {
+    width: 22%;
+    top: 30%;
+    right: 10%;
+  }
+}
 .game__fish--6 {
   top: 45%;
   left: 13%;
+}
+@media (max-width: 767px) {
+  .game__fish--6 {
+    width: 32%;
+    top: 38%;
+    left: 13%;
+  }
 }
 .game__fish--7 {
   top: 31%;
   right: 7%;
 }
+@media (max-width: 767px) {
+  .game__fish--7 {
+    width: 21%;
+    top: 72%;
+    right: 43%;
+  }
+}
 .game__fish--8 {
   bottom: 15%;
   left: 14%;
+}
+@media (max-width: 767px) {
+  .game__fish--8 {
+    width: 23%;
+    bottom: 15%;
+    left: 6%;
+  }
 }
 .game__fish--9 {
   right: 15%;
   bottom: 0%;
 }
+@media (max-width: 767px) {
+  .game__fish--9 {
+    width: 42%;
+    right: 5%;
+    bottom: 5%;
+  }
+}
 .game__fish--10 {
   top: 50%;
   left: 40%;
 }
+@media (max-width: 767px) {
+  .game__fish--10 {
+    width: 55%;
+    top: 55%;
+    left: 25%;
+  }
+}
 .game__img {
   display: block;
   width: 100%;
-}
-.game__result {
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background-color: rgba(33, 68, 85, 0.81);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.game__result-content {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 0 100px;
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.game__result-img {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  position: absolute;
-  top: -105%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.game__result-bg-image {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.game__result-text {
-  white-space: pre-wrap;
-  text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  margin: 0;
-  font-family: "Days One";
-  font-size: 56px;
-  color: #FFFFFF;
-}
-.game__result-link {
-  z-index: 5;
-  display: block;
-  cursor: pointer;
-  position: absolute;
-  bottom: -93%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.game__result-link:hover .game__result-link-img {
-  display: none;
-}
-.game__result-link:hover .game__result-link-img--active {
-  display: block;
-}
-.game__result-link-img--active {
-  display: none;
 }
 
 .footer {
