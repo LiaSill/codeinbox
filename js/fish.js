@@ -2,7 +2,7 @@
 
 const bgFishMusic = new Audio("assets/sounds/fish-theme.mp3");
 bgFishMusic.loop = true;
-bgFishMusic.volume = 0.1;
+bgFishMusic.volume = 0.3;
 
 window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
@@ -32,7 +32,7 @@ function playDialogSound(step, dialogList) {
 }
 
 function increaseMusicVolume(music) {
-  const targetVolume = 0.6;
+  const targetVolume = 0.9;
   const interval = setInterval(() => {
     if (music.volume >= targetVolume) {
       clearInterval(interval);
@@ -120,6 +120,10 @@ const correctSound = new Audio("assets/sounds/correct-sound.mp3")
 const wrongSound = new Audio("assets/sounds/wrong-sound.mp3")
 const victorySound = new Audio("assets/sounds/victory-sound.mp3")
 const game = document.getElementById("result")
+
+correctSound.volume = 0.4;
+wrongSound.volume = 0.8;
+victorySound.volume = 0.8;
 
 fishes.forEach(fish => {
   fish.addEventListener("click", () => {
