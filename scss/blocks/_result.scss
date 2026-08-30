@@ -10,6 +10,16 @@
 
   @include vp-767 {
     border-radius: 33px;
+    position: inherit;
+  }
+
+  &__bg-image {
+    user-select: none;
+
+    @include vp-767 {
+      width: 85vw;
+      position: relative;
+    }
   }
 
   &__content {
@@ -26,7 +36,9 @@
     justify-content: center;
 
     @include vp-767 {
-      top: 30%;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
       gap: 20px;
     }
   }
@@ -41,14 +53,6 @@
     @include vp-767 {
       top: -60%;
       width: 35%;
-    }
-  }
-
-  &__bg-image {
-    user-select: none;
-
-    @include vp-767 {
-     width: 70vw;
     }
   }
 
