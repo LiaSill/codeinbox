@@ -17,7 +17,7 @@
     user-select: none;
 
     @include vp-767 {
-      width: 85vw;
+      width: 87vw;
       position: relative;
     }
   }
@@ -51,7 +51,7 @@
     transform: translateX(-50%);
 
     @include vp-767 {
-      top: -60%;
+      top: -55%;
       width: 35%;
     }
   }
@@ -81,7 +81,7 @@
 
     @include vp-767 {
       width: 35%;
-      bottom: -50%
+      bottom: -45%
     }
 
     &:hover {

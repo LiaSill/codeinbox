@@ -694,7 +694,7 @@ a {
 }
 @media (max-width: 767px) {
   .result__bg-image {
-    width: 85vw;
+    width: 87vw;
     position: relative;
   }
 }
@@ -730,7 +730,7 @@ a {
 }
 @media (max-width: 767px) {
   .result__cat-img {
-    top: -60%;
+    top: -55%;
     width: 35%;
   }
 }
@@ -762,7 +762,7 @@ a {
 @media (max-width: 767px) {
   .result__link {
     width: 35%;
-    bottom: -50%;
+    bottom: -45%;
   }
 }
 .result__link:hover .result__link-img {
