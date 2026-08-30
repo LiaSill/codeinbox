@@ -866,8 +866,10 @@ a {
   transform: translateX(-50%);
   transform: translateY(-50%);
 }
-.game__fish:hover {
-  filter: drop-shadow(4px 0 0 #FFFFFF) drop-shadow(-4px 0 0 #FFFFFF) drop-shadow(0 4px 0 #FFFFFF) drop-shadow(0 -4px 0 #FFFFFF);
+@media (hover: hover) {
+  .game__fish:hover {
+    filter: drop-shadow(4px 0 0 #FFFFFF) drop-shadow(-4px 0 0 #FFFFFF) drop-shadow(0 4px 0 #FFFFFF) drop-shadow(0 -4px 0 #FFFFFF);
+  }
 }
 .game__fish--correct {
   filter: drop-shadow(4px 0 0 #39d353) drop-shadow(-4px 0 0 #39d353) drop-shadow(0 4px 0 #39d353) drop-shadow(0 -4px 0 #39d353);

@@ -31,9 +31,11 @@
     transform: translateX(-50%);
     transform: translateY(-50%);
 
-    &:hover {
-      filter:
-        drop-shadow(4px 0 0 $color-white) drop-shadow(-4px 0 0 $color-white) drop-shadow(0 4px 0 $color-white) drop-shadow(0 -4px 0 $color-white);
+    @media (hover: hover) {
+      &:hover {
+        filter:
+          drop-shadow(4px 0 0 $color-white) drop-shadow(-4px 0 0 $color-white) drop-shadow(0 4px 0 $color-white) drop-shadow(0 -4px 0 $color-white);
+      }
     }
 
     &--correct {
