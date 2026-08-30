@@ -45,22 +45,22 @@ const indexDialogs = [
   {
     text: "Привет! Меня зовут кот Рудис.\nДавай поиграем!",
     sprite: "images/cat-dialog-1.png",
-    sound: "assets/sounds/dialog-1-audio(1).m4a"
+    sound: "assets/sounds/dialog-1-audio(1).mp3"
   },
   {
     text: "Как тебя зовут?",
     sprite: "images/cat-dialog-2.png",
-    sound: "assets/sounds/dialog-2-audio(1).m4a"
+    sound: "assets/sounds/dialog-2-audio(1).mp3"
   },
   {
     text: "",
     sprite: "images/cat-dialog-3.png",
-    sound: "assets/sounds/dialog-3-audio(2).m4a"
+    sound: "assets/sounds/dialog-3-audio(2).mp3"
   },
   {
     text: "Будем мы с тобой играть,\nЦифры кода узнавать!",
     sprite: "images/cat-dialog-4.png",
-    sound: "assets/sounds/dialog-4-audio(2).m4a"
+    sound: "assets/sounds/dialog-4-audio(2).mp3"
   }
 ];
 
