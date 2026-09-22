@@ -4,43 +4,17 @@ const bgFishMusic = new Audio("assets/sounds/fish-theme.mp3");
 bgFishMusic.loop = true;
 bgFishMusic.volume = 0.3;
 
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-      preloader.classList.add("hide");
-      setTimeout(() => {
-        preloader.style.display = "none";
-
-        bgFishMusic.play().catch(() => {
-          console.log("Браузер заблокировал автоматическое воспроизведение.")
-        })
-      }, 1000)
-    }, 2000);
-  });
+import "../components/preloader.js";
 
 // Functions
 
-function playDialogSound(step, dialogList) {
-  return new Promise((resolve) => {
-    const sound = new Audio(dialogList[step].sound);
-    sound.volume = 1;
-    sound.addEventListener("ended", resolve);
-    sound.play().catch(() => {
-      resolve();
-    });
-  });
-}
+import { increaseMusicVolume } from "../components/music.js";
 
-function increaseMusicVolume(music) {
-  const targetVolume = 0.9;
-  const interval = setInterval(() => {
-    if (music.volume >= targetVolume) {
-      clearInterval(interval);
-      return;
-    }
-    music.volume += 0.01;
-  }, 30);
-}
+import { playDialogSound } from "../components/dialog.js";
+
+import { getCodeDigit } from "../data/code.js";
+
+import { completeGame } from "../progress.js";
 
 // Fish Dialog Box
 const fishDialogText = document.getElementById("fishDialog-text");
@@ -48,7 +22,9 @@ const fishCatSprite = document.getElementById("fishCat-sprite");
 const fishNextBtn = document.getElementById("fishNext-btn");
 const fishDialog = document.getElementById("fishDialog");
 const fishTip = document.getElementById("dialogTip");
+const fisrtCodeNum = document.getElementById("firstCodeNum");
 
+//"assets/sounds/dialog-1-audio(1).mp3"
 const fishDialogs = [
   {
     text: "У меня дома есть аквариум!\nВ нём плавают красивые рыбки!",
@@ -76,40 +52,40 @@ let currentFishDialog = 0;
 let firstFishDialogPlayed = false;
 
 function showFishDialog(step) {
-    fishCatSprite.src = fishDialogs[step].sprite;
-    fishDialogText.textContent = fishDialogs[step].text;
-    }
+  fishCatSprite.src = fishDialogs[step].sprite;
+  fishDialogText.textContent = fishDialogs[step].text;
+}
 
 showFishDialog(currentFishDialog)
 
 fishNextBtn.onclick = async () => {
 
-    if (currentFishDialog === 0 && !firstFishDialogPlayed) {
-      firstFishDialogPlayed = true;
-      fishTip.classList.add("visually-hidden");
-      // fishNextBtn.disabled = true;
-      bgFishMusic.volume = 0.1;
-      bgFishMusic.play().catch(() => {});
-      await playDialogSound(currentFishDialog);
-      // fishNextBtn.disabled = false;
-      return;
-    }
-
-    if (currentFishDialog === 1 || currentFishDialog === 2) {
-      fishCatSprite.classList.add("visually-hidden")
-    }
-
-    if (currentFishDialog >= fishDialogs.length - 1) {
-        fishDialog.style.display = "none";
-        increaseMusicVolume(bgFishMusic);
-        return;
-    }
-
-    currentFishDialog++;
-    showFishDialog(currentFishDialog);
+  if (currentFishDialog === 0 && !firstFishDialogPlayed) {
+    firstFishDialogPlayed = true;
+    fishTip.classList.add("visually-hidden");
+    bgFishMusic.volume = 0.1;
+    bgFishMusic.play().catch(() => { });
     // fishNextBtn.disabled = true;
     await playDialogSound(currentFishDialog);
     // fishNextBtn.disabled = false;
+    return;
+  }
+
+  if (currentFishDialog === 1 || currentFishDialog === 2) {
+    fishCatSprite.classList.add("visually-hidden")
+  }
+
+  if (currentFishDialog >= fishDialogs.length - 1) {
+    fishDialog.style.display = "none";
+    increaseMusicVolume(bgFishMusic, 0.9);
+    return;
+  }
+
+  currentFishDialog++;
+  showFishDialog(currentFishDialog);
+  // fishNextBtn.disabled = true;
+  await playDialogSound(currentFishDialog);
+  // fishNextBtn.disabled = false;
 };
 
 // Fish Count Game
@@ -129,6 +105,7 @@ fishes.forEach(fish => {
   fish.addEventListener("click", () => {
     const number = Number(fish.dataset.number);
     if (number === currentFishNumber) {
+      fish.classList.remove("game__fish--stroke");
       fish.classList.add("game__fish--correct");
       correctSound.currentTime = 0;
       correctSound.play();
@@ -136,13 +113,19 @@ fishes.forEach(fish => {
       currentFishNumber++;
 
       if (currentFishNumber > 10) {
+        completeGame(1);
+        fisrtCodeNum.textContent = getCodeDigit(0);
         victorySound.play();
-        game.classList.remove("visually-hidden")
+        game.classList.remove("visually-hidden");
       }
     } else {
+      fish.classList.remove("game__fish--stroke");
       fish.classList.add("game__fish--wrong");
       setTimeout(() => {
         fish.classList.remove("game__fish--wrong");
+        if (!fish.classList.contains("game__fish--correct")) {
+          fish.classList.add("game__fish--stroke");
+        }
       }, 1000);
       wrongSound.currentTime = 0;
       wrongSound.play();

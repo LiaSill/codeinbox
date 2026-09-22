@@ -33,27 +33,34 @@
         <h1 class="visually-hidden">Код в Квадрате - Математические игры для детей</h1>
         <div class="main-page__wrapper">
           <img class="main-page__pawprint-img" src="images/pawprint.png" width="273" height="412" alt="Лапки">
-          <a class="main-page__game-link" href="fish-count-game.html" aria-label="Ссылка на игру">
+          <a class="main-page__game-link" id="game-link" href="fish-count-game.html" aria-label="Ссылка на игру">
           </a>
-          <ul class="codebox__list">
-            <li class="codebox__item">
-              <div class="codebox__box codebox__box--secret">
+          <ul class="codebox">
+            <li class="codebox__list-item">
+              <div class="codebox__box codebox__box--bright" id="codebox-1">
                 <img class="codebox__icon-question-mark" src="images/question-mark.png" width="40" height="65" alt="Вопросительный знак">
+                <span class="codebox__code visually-hidden" id="firstCodeNum"></span>
               </div>
             </li>
-            <li class="codebox__item">
-              <div class="codebox__box">
+            <li class="codebox__list-item">
+              <div class="codebox__box" id="codebox-2">
                 <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                <img class="codebox__icon-question-mark visually-hidden" src="images/question-mark.png" width="40" height="65" alt="Вопросительный знак">
+                <span class="codebox__code visually-hidden" id="secondCodeNum"></span>
               </div>
             </li>
-            <li class="codebox__item">
-              <div class="codebox__box">
+            <li class="codebox__list-item">
+              <div class="codebox__box" id="codebox-3">
                 <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                <img class="codebox__icon-question-mark visually-hidden" src="images/question-mark.png" width="40" height="65" alt="Вопросительный знак">
+                <span class="codebox__code visually-hidden" id="thirdCodeNum"></span>
               </div>
             </li>
-            <li class="codebox__item">
-              <div class="codebox__box">
+            <li class="codebox__list-item">
+              <div class="codebox__box" id="codebox-4">
                 <img class="codebox__icon-lock" src="images/lock.png" width="66" height="78" alt="Замок">
+                <img class="codebox__icon-question-mark visually-hidden" src="images/question-mark.png" width="40" height="65" alt="Вопросительный знак">
+                <span class="codebox__code visually-hidden" id="fourthCodeNum"></span>
               </div>
             </li>
           </ul>
@@ -90,7 +97,7 @@
        <img class="footer__cat-smiling-img" src="images/sitting-kitten.png" width="187" height="187" alt="Котёнок">
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,8 @@
 .codebox {
-  &__list {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 
 
   &__box {
@@ -24,7 +22,7 @@
     }
 
 
-    &--secret {
+    &--bright {
       background-color: $color-baby-blue;
       border-color: $color-ink-blue;
     }

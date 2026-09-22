@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+  <title>Код В Квадрате</title>
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <img class="preloader__gif" src="assets/cat_loader.gif" alt="Загрузка">
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__main-link" href="index.html" aria-label="Ссылка на главную страницу">
+          <img class="header__icon-paw-main" src="images/paw-main.png" width="68" height="60" alt="">
+          <img class="header__icon-paw-main header__icon-paw-main--active" src="images/paw-main-active.png" width="68"
+            height="60" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="game">
+      <div class="container">
+        <h1 class="visually-hidden">Код в Квадрате - Игра "Домики"</h1>
+        <div class="game__field" id="coloring">
+          
+          <div class="result visually-hidden" id="result">
+            <div class="result__picture">
+              <picture>
+                <source media="(max-width: 767px)" srcset="images/result-bg-mobile.png">
+                <img class="result__bg-image" src="images/result-bg.png" width="1308" height="366" alt="Фон диалога">
+              </picture>
+            </div>
+            <div class="result__content">
+              <img class="result__cat-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
+              <p class="result__text">Весь код найден! Поздравляю!</p>
+              <ul class="codebox__list">
+                <li class="codebox__item">
+                  <div class="codebox__box codebox__box--secret">
+                    <span class="codebox__code" id="firstCodeNum"></span>
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box codebox__box--secret">
+                    <span class="codebox__code" id="secondCodeNum"></span>
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box codebox__box--secret">
+                    <span class="codebox__code" id="thirdCodeNum"></span>
+                  </div>
+                </li>
+                <li class="codebox__item">
+                  <div class="codebox__box codebox__box--secret">
+                    <span class="codebox__code" id="fourthCodeNum"></span>
+                  </div>
+                </li>
+              </ul>
+              <a class="result__link" href="index.html" aria-label="Ссылка на главную страницу">
+                <img class="result__link-img" src="images/paw-btn.png" alt="">
+                <img class="result__link-img result__link-img--active" src="images/paw-btn-active.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="dialog-overlay" id="coloringDialog">
+    <div class="dialog-box">
+      <img class="dialog-box__cat-img" id="coloringCat-sprite" src="images/cat-dialog-1.png" width="180" height="230"
+        alt="Кот Рудис">
+      <div class="dialog-box__picture">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/dialog-bg-mobile.png">
+          <img class="dialog-box__image" src="images/dialog-bg.png" width="1691" height="413" alt="Фон диалога">
+        </picture>
+      </div>
+      <div class="dialog-box__content">
+        <p class="dialog-box__text" id="coloringDialog-text"></p>
+      </div>
+      <button class="dialog-box__btn btn" id="coloringNext-btn">
+        <img class="dialog-box__paw-btn" src="images/paw-btn.png" width="231" height="220" alt="Кнопка-лапка">
+        <img class="dialog-box__paw-btn dialog-box__paw-btn--active" src="images/paw-btn-active.png" width="231"
+          height="220" alt="Кнопка-лапка активная">
+      </button>
+      <p class="dialog-box__tip" id="dialogTip">Нажми на лапку!</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+
+    </div>
+  </footer>
+  <script type="module" src="js/games/coloring.js"></script>
+</body>
+
+</html>

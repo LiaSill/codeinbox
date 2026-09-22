@@ -44,16 +44,54 @@
     aspect-ratio: 1070/600;
     border: 14px solid $color-ink-blue;
     border-radius: 43px;
-    background-image: url("../images/preshow-1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    &--fish {
+      background-image: url("../images/preshow-1.png");
+    }
+
+    &--house {
+      background-image: url("../images/preshow-2.png");
+    }
+
+    &--numbers {
+      background-image: url("../images/preshow-3.png");
+    }
+
+    &--coloring {
+      background-image: url("../images/preshow-4.png");
+    }
+
+    &--final {
+      background-image: url("../images/preshow-5.png");
+    }
 
     @include vp-767 {
       width: 95%;
       aspect-ratio: 300/500;
       border-width: 8px;
-      background-image: url("../images/preshow-mobile-1.png");
+
+      &--fish {
+        background-image: url("../images/preshow-mobile-1.png");
+      }
+
+      &--house {
+        background-image: url("../images/preshow-mobile-2.png");
+      }
+
+      &--numbers {
+        background-image: url("../images/preshow-mobile-3.png");
+      }
+
+      &--coloring {
+        background-image: url("../images/preshow-mobile-4.png");
+      }
+
+      &--final {
+        background-image: url("../images/preshow-mobile-5.png");
+      }
     }
 
     &:hover,

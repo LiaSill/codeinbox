@@ -533,7 +533,7 @@ a {
 }
 .dialog-box__btn {
   position: absolute;
-  bottom: -35%;
+  bottom: -47%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -564,7 +564,7 @@ a {
   text-align: center;
   color: #FFFFFF;
   font-size: 50px;
-  bottom: -55%;
+  bottom: -64%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -617,7 +617,7 @@ a {
   display: block;
 }
 
-.codebox__list {
+.codebox {
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -639,7 +639,7 @@ a {
     border-width: 7px;
   }
 }
-.codebox__box--secret {
+.codebox__box--bright {
   background-color: #90C9F3;
   border-color: #0A4A69;
 }
@@ -814,17 +814,45 @@ a {
   aspect-ratio: 1070/600;
   border: 14px solid #0A4A69;
   border-radius: 43px;
-  background-image: url("../images/preshow-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.main-page__game-link--fish {
+  background-image: url("../images/preshow-1.png");
+}
+.main-page__game-link--house {
+  background-image: url("../images/preshow-2.png");
+}
+.main-page__game-link--numbers {
+  background-image: url("../images/preshow-3.png");
+}
+.main-page__game-link--coloring {
+  background-image: url("../images/preshow-4.png");
+}
+.main-page__game-link--final {
+  background-image: url("../images/preshow-5.png");
 }
 @media (max-width: 767px) {
   .main-page__game-link {
     width: 95%;
     aspect-ratio: 300/500;
     border-width: 8px;
+  }
+  .main-page__game-link--fish {
     background-image: url("../images/preshow-mobile-1.png");
+  }
+  .main-page__game-link--house {
+    background-image: url("../images/preshow-mobile-2.png");
+  }
+  .main-page__game-link--numbers {
+    background-image: url("../images/preshow-mobile-3.png");
+  }
+  .main-page__game-link--coloring {
+    background-image: url("../images/preshow-mobile-4.png");
+  }
+  .main-page__game-link--final {
+    background-image: url("../images/preshow-mobile-5.png");
   }
 }
 .main-page__game-link:hover, .main-page__game-link:focus-visible {
@@ -842,18 +870,40 @@ a {
   max-width: 1350px;
   aspect-ratio: 16/9;
   margin: 0 auto;
-  background-image: url("../images/game-1-bg.png");
   background-size: cover;
   background-position: center;
   border: 14px solid #0A4A69;
   border-radius: 43px;
 }
+.game__field--fish {
+  background-image: url("../images/game-1-bg.png");
+}
+.game__field--house {
+  background-image: url("../images/game-2-bg.png");
+}
+.game__field--numbers {
+  background-image: url("../images/game-3-bg.png");
+}
+.game__field--coloring {
+  background-image: url("../images/game-4-bg.png");
+}
 @media (max-width: 767px) {
   .game__field {
     width: 95%;
     aspect-ratio: 320/611;
-    background-image: url("../images/game-1-bg-mobile.png");
     border-width: 8px;
+  }
+  .game__field--fish {
+    background-image: url("../images/game-1-bg-mobile.png");
+  }
+  .game__field--house {
+    background-image: url("../images/game-2-bg-mobile.png");
+  }
+  .game__field--numbers {
+    background-image: url("../images/game-3-bg-mobile.png");
+  }
+  .game__field--coloring {
+    background-image: url("../images/game-4-bg-mobile.png");
   }
 }
 .game__fish {
@@ -862,12 +912,15 @@ a {
   margin: 0;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   transition: filter 0.15s ease;
   transform: translateX(-50%);
   transform: translateY(-50%);
 }
 @media (hover: hover) {
-  .game__fish:hover {
+  .game__fish--stroke:hover {
     filter: drop-shadow(4px 0 0 #FFFFFF) drop-shadow(-4px 0 0 #FFFFFF) drop-shadow(0 4px 0 #FFFFFF) drop-shadow(0 -4px 0 #FFFFFF);
   }
 }
@@ -990,6 +1043,218 @@ a {
 .game__img {
   display: block;
   width: 100%;
+}
+.game__numbers-panel {
+  position: absolute;
+  z-index: 1;
+  height: 90%;
+  width: 18%;
+  background-color: #DEFFE9;
+  border: 5px solid #36823F;
+  border-radius: 25px;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px 15px 15px;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .game__numbers-panel {
+    top: 2%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    height: 25%;
+    grid-template-columns: repeat(5, auto);
+    border-width: 2px;
+    padding: 5px;
+    gap: 1px;
+  }
+}
+.game__number {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+}
+
+.houses .house__floor {
+  background-color: var(--floor-background);
+  border: 2px solid var(--floor-border);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.houses .house__answer {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+}
+.houses .house__answer-number, .houses .house__answer-window {
+  position: absolute;
+  inset: 0;
+}
+.houses .house__floor-number, .houses .house__answer-number {
+  display: block;
+  background-color: var(--floor-number);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+.houses .house__plus {
+  display: block;
+  flex-shrink: 0;
+}
+.houses .house__answer-number {
+  position: relative;
+}
+.houses .house__answer-window {
+  position: absolute;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+.houses .house__roof {
+  position: relative;
+  background-color: var(--roof-border);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.houses .house__roof::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: var(--roof-background);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.houses .house__roof-number {
+  position: relative;
+  z-index: 1;
+  display: block;
+  background-color: var(--roof-number);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+.houses .house__answer-window {
+  position: absolute;
+  border-radius: 28px;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+.houses .house--2 .house__floor {
+  width: 439px;
+  height: 252px;
+}
+.houses .house--2 .house__floor-number {
+  height: 134px;
+}
+.houses .house--2 .house__plus {
+  width: 92px;
+  height: 92px;
+}
+.houses .house--2 .house__roof {
+  width: 582px;
+  height: 189px;
+}
+.houses .house--2 .house__roof-number {
+  height: 111px;
+}
+.houses .house--2 .house__answer-window {
+  width: 127px;
+  height: 155px;
+}
+.houses .house--2 .house__answer-number {
+  height: 134px;
+}
+.houses .house--3 .house__floor {
+  width: 344px;
+  height: 188px;
+}
+.houses .house--3 .house__floor-number {
+  height: 111px;
+}
+.houses .house--3 .house__plus {
+  width: 67px;
+  height: 67px;
+}
+.houses .house--3 .house__roof {
+  width: 481px;
+  height: 156px;
+}
+.houses .house--3 .house__roof-number {
+  height: 97px;
+}
+.houses .house--3 .house__answer-window {
+  width: 103px;
+  height: 126px;
+}
+.houses .house--3 .house__answer-number {
+  height: 111px;
+}
+.houses .house--4 .house__floor {
+  width: 330px;
+  height: 149px;
+}
+.houses .house--4 .house__floor-number {
+  height: 89px;
+}
+.houses .house--4 .house__plus {
+  width: 55px;
+  height: 55px;
+}
+.houses .house--4 .house__roof {
+  width: 402px;
+  height: 153px;
+}
+.houses .house--4 .house__roof-number {
+  height: 87px;
+}
+.houses .house--4 .house__answer-window {
+  width: 91px;
+  height: 111px;
+}
+.houses .house--4 .house__answer-number {
+  height: 89px;
+}
+.houses .house--5 .house__floor {
+  width: 281px;
+  height: 123px;
+}
+.houses .house--5 .house__floor-number {
+  height: 75px;
+}
+.houses .house--5 .house__plus {
+  width: 55px;
+  height: 55px;
+}
+.houses .house--5 .house__roof {
+  width: 338px;
+  height: 153px;
+}
+.houses .house--5 .house__roof-number {
+  height: 81px;
+}
+.houses .house--5 .house__answer-window {
+  width: 82px;
+  height: 100px;
+}
+.houses .house--5 .house__answer-number {
+  height: 75px;
 }
 
 .footer {
