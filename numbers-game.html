@@ -31,9 +31,56 @@
   <main>
     <section class="game">
       <div class="container">
-        <h1 class="visually-hidden">Код в Квадрате - Игра "Домики"</h1>
-        <div class="game__field" id="numbers">
-          
+        <h1 class="visually-hidden">Код в Квадрате - Игра "Что это за число?"</h1>
+        <div class="game__field game__field--numbers" id="numbers">
+          <div class="game__num-contours">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/contour-num-1-mobile.png">
+              <img class="game__contour-num game__contour-num--1" id="contour-1" src="images/contour-num-1.png" alt="Контур 1">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/colored-contour-num-1-mobile.png">
+              <img class="game__colored-contour-num game__colored-contour-num--1 visually-hidden" src="images/colored-contour-num-1.png" alt="Закрашенная 1">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/contour-num-3-mobile.png">
+              <img class="game__contour-num game__contour-num--3" id="contour-3" src="images/contour-num-3.png" alt="Контур 3">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/colored-contour-num-3-mobile.png">
+              <img class="game__colored-contour-num game__colored-contour-num--3 visually-hidden" src="images/colored-contour-num-3.png" alt="Закрашенная 3">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/contour-num-7-mobile.png">
+              <img class="game__contour-num game__contour-num--7" id="contour-7" src="images/contour-num-7.png" alt="Контур 7">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/colored-contour-num-7-mobile.png">
+              <img class="game__colored-contour-num game__colored-contour-num--7 visually-hidden" src="images/colored-contour-num-7.png" alt="Закрашенная 7">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/contour-num-9-mobile.png">
+              <img class="game__contour-num game__contour-num--9" id="contour-9" src="images/contour-num-9.png" alt="Контур 9">
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/colored-contour-num-9-mobile.png">
+              <img class="game__colored-contour-num game__colored-contour-num--9 visually-hidden" src="images/colored-contour-num-9.png" alt="Закрашенная 9">
+            </picture>
+          </div>
+          <div class="game__numbers-panel game__numbers-panel--numbers">
+            <button class="game__number btn" id="number-1" data-number="1">
+              <img class="game__number-img" src="images/colored-num-1.png" alt="Цифра 1">
+            </button>
+            <button class="game__number btn" id="number-3" data-number="3">
+              <img class="game__number-img" src="images/colored-num-3.png" alt="Цифра 3">
+            </button>
+            <button class="game__number btn" id="number-7" data-number="7">
+              <img class="game__number-img" src="images/colored-num-7.png" alt="Цифра 7">
+            </button>
+            <button class="game__number btn" id="number-9" data-number="9">
+              <img class="game__number-img" src="images/colored-num-9.png" alt="Цифра 9">
+            </button>
+          </div>
           <div class="result visually-hidden" id="result">
             <div class="result__picture">
               <picture>
@@ -42,21 +89,21 @@
               </picture>
             </div>
             <div class="result__content">
-              <img class="result__cat-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
+              <img class="result__cat-img" src="images/cat-dialog-6.png" alt="Счастливый Рудис">
               <p class="result__text">Вау! Третья цифра кода открыта!</p>
-              <ul class="codebox__list">
+              <ul class="codebox">
                 <li class="codebox__item">
-                  <div class="codebox__box codebox__box--secret">
+                  <div class="codebox__box codebox__box--bright">
                     <span class="codebox__code" id="firstCodeNum"></span>
                   </div>
                 </li>
                 <li class="codebox__item">
-                  <div class="codebox__box codebox__box--secret">
+                  <div class="codebox__box codebox__box--bright">
                     <span class="codebox__code" id="secondCodeNum"></span>
                   </div>
                 </li>
                 <li class="codebox__item">
-                  <div class="codebox__box codebox__box--secret">
+                  <div class="codebox__box codebox__box--bright">
                     <span class="codebox__code" id="thirdCodeNum"></span>
                   </div>
                 </li>

@@ -67,8 +67,16 @@
     font-size: 64px;
     color: $color-white;
 
+    &--small {
+      font-size: 50px;
+    }
+
     @include vp-767 {
       font-size: 24pt;
+
+      &--small {
+        font-size: 20pt;
+      }
     }
   }
 

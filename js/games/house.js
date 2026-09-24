@@ -73,7 +73,8 @@ houseNextBtn.onclick = async () => {
   }
 
   if (currentHouseDialog === 1 || currentHouseDialog === 2) {
-    houseCatSprite.classList.add("visually-hidden")
+    houseCatSprite.classList.add("visually-hidden");
+    houseDialogText.classList.add("dialog-box__text--small");
   }
 
   if (currentHouseDialog >= houseDialogs.length - 1) {
@@ -171,7 +172,6 @@ numbers.forEach((number) => {
 
     draggedNumber = number;
 
-    // Захватываем pointer
     number.setPointerCapture(event.pointerId);
 
     dragClone = number.cloneNode(true);

@@ -93,12 +93,12 @@ const secondDialogs = [
 const thirdDialogs = [
   {
     text: "Половина игр позади! Здорово!",
-    sprite: "images/cat-dialog-1.png",
+    sprite: "images/cat-dialog-6.png",
     sound: ""
   },
   {
     text: "У тебя так хорошо получается!\nХочешь стать ученым в будущем?",
-    sprite: "images/cat-dialog-2.png",
+    sprite: "images/cat-dialog-4.png",
     sound: ""
   }
 ];

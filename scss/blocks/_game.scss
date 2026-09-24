@@ -52,6 +52,8 @@
     }
   }
 
+  // Fish
+
   &__fish {
     position: absolute;
     padding: 0;
@@ -197,6 +199,8 @@
     width: 100%;
   }
 
+  // House
+
   &__numbers-panel {
     position: absolute;
     z-index: 1;
@@ -215,6 +219,12 @@
     padding: 10px 15px 15px 15px;
     gap: 5px;
 
+    &--numbers {
+      width: 40%;
+      border-color: $color-numbers-border;
+      background-color: $color-numbers-bg;
+    }
+
     @include vp-767 {
       top: 2%;
       right: 50%;
@@ -225,6 +235,10 @@
       border-width: 2px;
       padding: 5px;
       gap: 1px;
+
+      &--numbers {
+        grid-template-columns: 1;
+      }
     }
   }
 
@@ -342,5 +356,71 @@
 
   &__roof-1-img {
     max-width: none;
+  }
+
+  // Numbers
+
+  &__num-contours {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__contour-num,
+  &__colored-contour-num {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+
+    @include vp-767 {
+      width: 30%;
+      height: 30%;
+    }
+  }
+
+  &__contour-num--1,
+  &__colored-contour-num--1 {
+    top: 5%;
+    left: -5%;
+
+    @include vp-767 {
+      top: 25%;
+      left: 10%;
+    }
+  }
+
+  &__contour-num--3,
+  &__colored-contour-num--3 {
+    bottom: 5%;
+    right: 40%;
+
+    @include vp-767 {
+      bottom: 35%;
+      right: 10%;
+    }
+  }
+
+  &__contour-num--7,
+  &__colored-contour-num--7 {
+    bottom: 9%;
+    left: -3%;
+
+    @include vp-767 {
+      bottom: 15%;
+      left: 10%;
+    }
+  }
+
+  &__contour-num--9,
+  &__colored-contour-num--9 {
+    top: 9%;
+    right: 38%;
+
+    @include vp-767 {
+      top: 65%;
+      right: 10%;
+    }
   }
 }
