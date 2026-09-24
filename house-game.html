@@ -33,8 +33,136 @@
       <div class="container">
         <h1 class="visually-hidden">Код в Квадрате - Игра "Домики"</h1>
         <div class="game__field game__field--house">
-          <div class="houses" id="houses">
-            
+          <div class="game__houses" id="houses">
+            <div class="game__house-1">
+              <div class="game__roof-1">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-1-roof-mobile.png">
+                  <img class="game__roof-1-img" src="images/house-1-roof.png" alt="Крыша">
+                </picture>
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-1-result-num-mobile.png">
+                  <img class="game__result-1" src="images/house-1-result-num.png" alt="Восемь">
+                </picture>
+              </div>
+              <div class="game__floor-1">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-1-floor-red-mobile.png">
+                  <img class="game__floor-1-img" src="images/house-1-floor-red.png" alt="Этаж">
+                </picture>
+                <div class="game__floor-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-red-num-1-mobile.png">
+                    <img class="game__floor-1-num" src="images/house-1-floor-red-num-1.png" alt="Четыре">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-red-plus-mobile.png">
+                    <img class="game__floor-1-plus" src="images/house-1-floor-red-plus.png" alt="Плюс">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-red-num-1-mobile.png">
+                    <img class="game__floor-1-num" src="images/house-1-floor-red-num-1.png" alt="Четыре">
+                  </picture>
+                  <button class="game__floor-1-blank btn" id="resultH1F1"></button>
+                </div>
+              </div>
+              <div class="game__floor-1">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-1-floor-yellow-mobile.png">
+                  <img class="game__floor-1-img" src="images/house-1-floor-yellow.png" alt="Этаж">
+                </picture>
+                <div class="game__floor-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-yellow-num-1-mobile.png">
+                    <img class="game__floor-1-num" src="images/house-1-floor-yellow-num-1.png" alt="Шесть">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-yellow-plus-mobile.png">
+                    <img class="game__floor-1-plus" src="images/house-1-floor-yellow-plus.png" alt="Плюс">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-1-floor-yellow-num-2-mobile.png">
+                    <img class="game__floor-1-num" src="images/house-1-floor-yellow-num-2.png" alt="Два">
+                  </picture>
+                  <button class="game__floor-1-blank btn" id="resultH1F2"></button>
+                </div>
+              </div>
+            </div>
+            <div class="game__house-2 visually-hidden">
+              <div class="game__roof-2">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-2-roof-mobile.png">
+                  <img class="game__roof-2-img" src="images/house-2-roof.png" alt="Крыша">
+                </picture>
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-2-result-num-mobile.png">
+                  <img class="game__result-2" src="images/house-2-result-num.png" alt="Пять">
+                </picture>
+              </div>
+              <div class="game__floor-2">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-2-floor-blue-mobile.png">
+                  <img class="game__floor-2-img" src="images/house-2-floor-blue.png" alt="Этаж">
+                </picture>
+                <div class="game__floor-wrapper game__floor-wrapper--house-2">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-blue-num-1-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-blue-num-1.png" alt="Ноль">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-blue-plus-mobile.png">
+                    <img class="game__floor-2-plus" src="images/house-2-floor-blue-plus.png" alt="Плюс">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-blue-num-2-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-blue-num-2.png" alt="Пять">
+                  </picture>
+                  <button class="game__floor-2-blank btn" id="resultH2F1"></button>
+                </div>
+              </div>
+              <div class="game__floor-2">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-2-floor-green-mobile.png">
+                  <img class="game__floor-2-img" src="images/house-2-floor-green.png" alt="Этаж">
+                </picture>
+                <div class="game__floor-wrapper game__floor-wrapper--house-2">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-green-num-1-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-green-num-1.png" alt="Восемь">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-green-minus-mobile.png">
+                    <img class="game__floor-2-plus" src="images/house-2-floor-green-minus.png" alt="Минус">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-green-num-2-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-green-num-2.png" alt="Три">
+                  </picture>
+                  <button class="game__floor-2-blank btn" id="resultH2F2"></button>
+                </div>
+              </div>
+              <div class="game__floor-2">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/house-2-floor-purple-mobile.png">
+                  <img class="game__floor-2-img" src="images/house-2-floor-purple.png" alt="Этаж">
+                </picture>
+                <div class="game__floor-wrapper game__floor-wrapper--house-2">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-purple-num-1-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-purple-num-1.png" alt="Два">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-purple-plus-mobile.png">
+                    <img class="game__floor-2-plus" src="images/house-2-floor-purple-plus.png" alt="Плюс">
+                  </picture>
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/house-2-floor-purple-num-2-mobile.png">
+                    <img class="game__floor-2-num" src="images/house-2-floor-purple-num-2.png" alt="Три">
+                  </picture>
+                  <button class="game__floor-2-blank btn" id="resultH2F3"></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="game__numbers-panel">
             <button class="game__number btn" id="number-1" data-number="1">
@@ -76,16 +204,16 @@
               </picture>
             </div>
             <div class="result__content">
-              <img class="result__cat-img" src="images/cat-dialog-2.png" alt="Счастливый Рудис">
+              <img class="result__cat-img" src="images/cat-dialog-3.png" alt="Счастливый Рудис">
               <p class="result__text">А вот и вторая цифра кода!</p>
-              <ul class="codebox__list">
+              <ul class="codebox">
                 <li class="codebox__item">
-                  <div class="codebox__box codebox__box--secret">
+                  <div class="codebox__box codebox__box--bright">
                     <span class="codebox__code" id="firstCodeNum"></span>
                   </div>
                 </li>
                 <li class="codebox__item">
-                  <div class="codebox__box codebox__box--secret">
+                  <div class="codebox__box codebox__box--bright">
                     <span class="codebox__code" id="secondCodeNum"></span>
                   </div>
                 </li>

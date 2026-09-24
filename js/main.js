@@ -249,7 +249,8 @@ indexNextBtn.onclick = async () => {
   if (currentState.neededNameInput && currentIndexDialog === 1) {
     playerName = nameInput.value.trim();
     if (!playerName) {
-      playerName = "котёнок"
+      playerName = "котёнок";
+      localStorage.setItem("playerName", playerName)
     }
     localStorage.setItem("playerName", playerName);
   }

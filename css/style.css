@@ -680,6 +680,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 5;
 }
 @media (max-width: 767px) {
   .result {
@@ -1079,182 +1080,104 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   height: auto;
+  touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-
-.houses .house__floor {
-  background-color: var(--floor-background);
-  border: 2px solid var(--floor-border);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.houses .house__answer {
-  position: relative;
-  flex-shrink: 0;
-  display: block;
-}
-.houses .house__answer-number, .houses .house__answer-window {
+.game__houses {
   position: absolute;
   inset: 0;
-}
-.houses .house__floor-number, .houses .house__answer-number {
-  display: block;
-  background-color: var(--floor-number);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-}
-.houses .house__plus {
-  display: block;
-  flex-shrink: 0;
-}
-.houses .house__answer-number {
-  position: relative;
-}
-.houses .house__answer-window {
-  position: absolute;
-  z-index: 2;
-  background-color: #FFFFFF;
-}
-.houses .house__roof {
-  position: relative;
-  background-color: var(--roof-border);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-.houses .house__roof::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  background-color: var(--roof-background);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+.game__house-1, .game__house-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin: 0 auto;
 }
-.houses .house__roof-number {
+.game__roof-1, .game__floor-1, .game__roof-2, .game__floor-2 {
   position: relative;
-  z-index: 1;
-  display: block;
-  background-color: var(--roof-number);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.houses .house__answer-window {
+.game__floor-wrapper, .game__result-1, .game__result-2 {
   position: absolute;
-  border-radius: 28px;
-  background-color: #FFFFFF;
+  z-index: 1;
+}
+.game__floor-1-blank, .game__floor-2-blank {
+  position: absolute;
   z-index: 2;
 }
-.houses .house--2 .house__floor {
-  width: 439px;
-  height: 252px;
+.game__floor-1-blank {
+  width: 130px;
+  height: 160px;
+  border: 4px solid #000000;
+  border-radius: 28px;
+  background-color: #FFFFFF;
+  right: -10%;
 }
-.houses .house--2 .house__floor-number {
-  height: 134px;
+@media (max-width: 767px) {
+  .game__floor-1-blank {
+    border-width: 2px;
+    border-radius: 14px;
+    width: 72px;
+    height: 86px;
+    right: -7%;
+  }
 }
-.houses .house--2 .house__plus {
-  width: 92px;
-  height: 92px;
+.game__floor-2-blank {
+  width: 110px;
+  height: 150px;
+  border: 4px solid #000000;
+  border-radius: 28px;
+  background-color: #FFFFFF;
+  right: -10%;
 }
-.houses .house--2 .house__roof {
-  width: 582px;
-  height: 189px;
+@media (max-width: 767px) {
+  .game__floor-2-blank {
+    border-width: 2px;
+    border-radius: 14px;
+    width: 64px;
+    height: 79px;
+    right: -7%;
+  }
 }
-.houses .house--2 .house__roof-number {
-  height: 111px;
+.game__blank--wrong {
+  border-color: #ff3b3b;
 }
-.houses .house--2 .house__answer-window {
-  width: 127px;
-  height: 155px;
+.game__floor-wrapper {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50%;
+  right: 25%;
+  transform: translate(13%, -50%);
 }
-.houses .house--2 .house__answer-number {
-  height: 134px;
+.game__floor-wrapper--house-2 {
+  gap: 30px;
 }
-.houses .house--3 .house__floor {
-  width: 344px;
-  height: 188px;
+@media (max-width: 767px) {
+  .game__floor-wrapper {
+    right: 20%;
+    gap: 20px;
+  }
 }
-.houses .house--3 .house__floor-number {
-  height: 111px;
+.game__result-1, .game__result-2 {
+  top: 55%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
-.houses .house--3 .house__plus {
-  width: 67px;
-  height: 67px;
+.game__floor-1-img {
+  max-width: none;
 }
-.houses .house--3 .house__roof {
-  width: 481px;
-  height: 156px;
-}
-.houses .house--3 .house__roof-number {
-  height: 97px;
-}
-.houses .house--3 .house__answer-window {
-  width: 103px;
-  height: 126px;
-}
-.houses .house--3 .house__answer-number {
-  height: 111px;
-}
-.houses .house--4 .house__floor {
-  width: 330px;
-  height: 149px;
-}
-.houses .house--4 .house__floor-number {
-  height: 89px;
-}
-.houses .house--4 .house__plus {
-  width: 55px;
-  height: 55px;
-}
-.houses .house--4 .house__roof {
-  width: 402px;
-  height: 153px;
-}
-.houses .house--4 .house__roof-number {
-  height: 87px;
-}
-.houses .house--4 .house__answer-window {
-  width: 91px;
-  height: 111px;
-}
-.houses .house--4 .house__answer-number {
-  height: 89px;
-}
-.houses .house--5 .house__floor {
-  width: 281px;
-  height: 123px;
-}
-.houses .house--5 .house__floor-number {
-  height: 75px;
-}
-.houses .house--5 .house__plus {
-  width: 55px;
-  height: 55px;
-}
-.houses .house--5 .house__roof {
-  width: 338px;
-  height: 153px;
-}
-.houses .house--5 .house__roof-number {
-  height: 81px;
-}
-.houses .house--5 .house__answer-window {
-  width: 82px;
-  height: 100px;
-}
-.houses .house--5 .house__answer-number {
-  height: 75px;
+.game__roof-1-img {
+  max-width: none;
 }
 
 .footer {
