@@ -756,6 +756,9 @@ a {
   .result__text {
     font-size: 45px;
   }
+  .result__text--small {
+    font-size: 40px;
+  }
 }
 .result__link {
   z-index: 5;
