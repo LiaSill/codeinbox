@@ -1,8 +1,8 @@
 // Preloader + Music
 
-const bgnumbersMusic = new Audio("assets/sounds/numbers-theme.mp3");
-bgnumbersMusic.loop = true;
-bgnumbersMusic.volume = 0.3;
+const bgNumbersMusic = new Audio("assets/sounds/numbers-theme.mp3");
+bgNumbersMusic.loop = true;
+bgNumbersMusic.volume = 0.3;
 
 import "../components/preloader.js";
 
@@ -55,8 +55,8 @@ numbersNextBtn.onclick = async () => {
   if (currentNumbersDialog === 0 && !firstNumbersDialogPlayed) {
     firstNumbersDialogPlayed = true;
     numbersTip.classList.add("visually-hidden");
-    bgnumbersMusic.volume = 0.1;
-    bgnumbersMusic.play().catch(() => { });
+    bgNumbersMusic.volume = 0.1;
+    bgNumbersMusic.play().catch(() => { });
     // numbersNextBtn.disabled = true;
     await playDialogSound(currentNumbersDialog);
     // numbersNextBtn.disabled = false;
@@ -70,7 +70,7 @@ numbersNextBtn.onclick = async () => {
 
   if (currentNumbersDialog >= numbersDialogs.length - 1) {
     numbersDialog.style.display = "none";
-    increaseMusicVolume(bgnumbersMusic, 0.8);
+    increaseMusicVolume(bgNumbersMusic, 0.8);
     return;
   }
 
@@ -80,8 +80,6 @@ numbersNextBtn.onclick = async () => {
   await playDialogSound(currentNumbersDialog);
   // numbersNextBtn.disabled = false;
 };
-
-// Numbers Game
 
 const correctSound = new Audio("assets/sounds/correct-sound.mp3")
 const wrongSound = new Audio("assets/sounds/wrong-sound.mp3")

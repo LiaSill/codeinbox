@@ -225,6 +225,13 @@
       background-color: $color-numbers-bg;
     }
 
+    &--coloring {
+      width: 20%;
+      display: flex;
+      border-color: $color-coloring-border;
+      background-color: $color-coloring-bg;
+    }
+
     @include vp-767 {
       top: 2%;
       right: 50%;
@@ -421,6 +428,443 @@
     @include vp-767 {
       top: 65%;
       right: 10%;
+    }
+  }
+
+  // Coloring
+
+  &__figure-img {
+    user-select: none;
+  }
+
+  &__figure-btn {
+    touch-action: none;
+    user-select: none;
+  }
+
+  &__figures {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__colors {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-767 {
+      flex-direction: row;
+    }
+
+    &--1 {
+      gap: 30px;
+
+      @include vp-767 {
+        gap: 10px;
+      }
+    }
+
+    &--2,
+    &--3 {
+      gap: 20px;
+
+      @include vp-767 {
+        gap: 5px;
+      }
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__figure-image {
+    user-select: none;
+    position: absolute;
+    object-fit: contain;
+
+    &--1-yb,
+    &--1-b,
+    &--1-trb,
+    &--1-brb,
+    &--1-tsrb,
+    &--1-bsrb,
+    &--2-bb,
+    &--2-botbb,
+    &--2-topbb,
+    &--2-gb,
+    &--2-lb,
+    &--2-mb,
+    &--2-rb,
+    &--3-y {
+      z-index: 1;
+    }
+
+    &--1-bb,
+    &--2-mbb,
+    &--2-lbb,
+    &--2-rbb,
+    &--3-yb {
+      z-index: 2;
+    }
+
+    &--1-y,
+    &--1-yb {
+      height: 60%;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+
+      @include vp-767 {
+        height: 30%;
+        top: 60%;
+        left: 35%;
+      }
+    }
+
+    &--1-b,
+    &--1-bb {
+      height: 15%;
+      top: 48%;
+      left: 21%;
+      transform: translate(-50%, -50%);
+
+      @include vp-767 {
+        height: 9%;
+        top: 58%;
+      }
+    }
+
+    &--1-tr,
+    &--1-trb {
+      height: 48%;
+      top: 27%;
+      left: 48%;
+      transform: translate(-50%, -52%);
+
+      @include vp-767 {
+        height: 25%;
+        top: 49%;
+        left: 67%;
+        transform: translate(-50%, -54%);
+      }
+    }
+
+    &--1-br,
+    &--1-brb {
+      height: 48%;
+      top: 75%;
+      left: 48%;
+      transform: translate(-50%, -52%);
+
+      @include vp-767 {
+        height: 25%;
+        top: 72%;
+        left: 67%;
+      }
+    }
+
+    &--1-tsr,
+    &--1-tsrb {
+      height: 36%;
+      top: 33%;
+      left: 57%;
+      transform: translate(-48%, -51%);
+
+      @include vp-767 {
+        height: 18%;
+        top: 50%;
+        left: 82%;
+        transform: translate(-48%, -45%);
+      }
+    }
+
+    &--1-bsr,
+    &--1-bsrb {
+      height: 36%;
+      top: 68%;
+      left: 57%;
+      transform: translate(-48%, -51%);
+
+      @include vp-767 {
+        height: 18%;
+        top: 68%;
+        left: 82%;
+        transform: translate(-48%, -47%);
+      }
+    }
+
+    &--2-b,
+    &--2-bb {
+      height: 30%;
+      top: 60%;
+      left: 24%;
+
+      @include vp-767 {
+        height: 20%;
+        top: 66%;
+        left: 5%;
+      }
+    }
+
+    &--2-botb,
+    &--2-botbb {
+      height: 25%;
+      top: 36%;
+      left: 41%;
+
+      @include vp-767 {
+        height: 16%;
+        top: 50%;
+        left: 46%;
+        transform: translateY(3%);
+      }
+    }
+
+    &--2-topb,
+    &--2-topbb {
+      height: 25%;
+      top: 12%;
+      left: 41%;
+
+      @include vp-767 {
+        height: 16%;
+        top: 35%;
+        left: 46%;
+        transform: translateY(1%);
+      }
+    }
+
+    &--2-g,
+    &--2-gb {
+      height: 25%;
+      top: 12%;
+      left: 46%;
+      transform: translateX(4%);
+
+      @include vp-767 {
+        height: 16%;
+        top: 36%;
+        left: 57%;
+        transform: translateX(5%);
+      }
+    }
+
+    &--2-lb,
+    &--2-lbb,
+    &--2-mb,
+    &--2-mbb,
+    &--2-rb,
+    &--2-rbb {
+      height: 12%;
+      top: 64%;
+
+      @include vp-767 {
+        height: 8%;
+        top: 69%;
+      }
+    }
+
+    &--2-lb,
+    &--2-lbb {
+      left: 29%;
+
+      @include vp-767 {
+        left: 17%;
+      }
+    }
+
+    &--2-mb,
+    &--2-mbb {
+      left: 41%;
+
+      @include vp-767 {
+        left: 45%;
+      }
+    }
+
+    &--2-rb,
+    &--2-rbb {
+      left: 52%;
+
+      @include vp-767 {
+        left: 72%;
+      }
+    }
+
+    &--3-blb,
+    &--3-blbb,
+    &--3-tlb,
+    &--3-tlbb,
+    &--3-trb,
+    &--3-trbb,
+    &--3-brb,
+    &--3-brbb {
+      height: 10%;
+
+      @include vp-767 {
+        height: 10%;
+      }
+    }
+
+    &--3-tb,
+    &--3-tbb {
+      height: 11%;
+
+      @include vp-767 {
+        height: 9%;
+      }
+    }
+
+    &--3-lb,
+    &--3-lbb,
+    &--3-rb,
+    &--3-rbb {
+      height: 13%;
+
+      @include vp-767 {
+        height: 10%;
+      }
+    }
+
+    &--3-y,
+    &--3-yb {
+      height: 29%;
+      top: 29%;
+      left: 37%;
+
+      @include vp-767 {
+        height: 23%;
+        top: 40%;
+        left: 27%;
+      }
+    }
+
+    &--3-s,
+    &--3-sb {
+      height: 40%;
+      top: 56%;
+      left: 43%;
+
+      @include vp-767 {
+        height: 35%;
+        top: 61%;
+        left: 43%;
+      }
+    }
+
+    &--3-tb,
+    &--3-tbb {
+      top: 19%;
+      left: 42%;
+
+      @include vp-767 {
+        top: 32%;
+        left: 39%;
+      }
+    }
+
+    &--3-trb,
+    &--3-trbb {
+      top: 25%;
+      left: 51%;
+
+      @include vp-767 {
+        top: 34%;
+        left: 65%;
+      }
+    }
+
+    &--3-tlb,
+    &--3-tlbb {
+      top: 25%;
+      left: 33%;
+
+      @include vp-767 {
+        top: 34%;
+        left: 14%;
+      }
+    }
+
+    &--3-lb,
+    &--3-lbb {
+      top: 38%;
+      left: 31%;
+
+      @include vp-767 {
+        top: 47%;
+        left: 11%;
+      }
+    }
+
+    &--3-rb,
+    &--3-rbb {
+      top: 38%;
+      left: 53%;
+
+      @include vp-767 {
+        top: 47%;
+        left: 70%;
+      }
+    }
+
+    &--3-brb,
+    &--3-brbb {
+      top: 53%;
+      left: 51%;
+
+      @include vp-767 {
+        top: 59%;
+        left: 65%;
+      }
+    }
+
+    &--3-blb,
+    &--3-blbb {
+      top: 53%;
+      left: 33%;
+
+      @include vp-767 {
+        top: 59%;
+        left: 14%;
+      }
+    }
+
+    &--3-rg,
+    &--3-rgb,
+    &--3-lg,
+    &--3-lgb {
+      height: 12%;
+
+      @include vp-767 {
+        height: 9%;
+      }
+    }
+
+    &--3-lg,
+    &--3-lgb {
+      top: 74%;
+      left: 47%;
+
+      @include vp-767 {
+        top: 75%;
+        left: 55%;
+      }
+    }
+
+    &--3-rg,
+    &--3-rgb {
+      top: 66%;
+      left: 30%;
+      transform: translateX(4%);
+
+      @include vp-767 {
+        top: 71%;
+        left: 9%;
+        transform: translateX(4%);
+      }
     }
   }
 }

@@ -161,8 +161,6 @@ function checkAnswer(blank, number) {
   wrongSound.play();
 }
 
-// Drag & Drop
-
 let draggedNumber = null;
 let dragClone = null;
 

@@ -15,7 +15,7 @@
 
 <body>
   <div class="preloader" id="preloader">
-    <img class="preloader__gif" src="assets/cat_loader.gif" alt="Загрузка">
+    <img class="preloader__gid" src="assets/cat_loader.gif" alt="Загрузка">
   </div>
   <header class="header">
     <div class="container">
@@ -31,9 +31,105 @@
   <main>
     <section class="game">
       <div class="container">
-        <h1 class="visually-hidden">Код в Квадрате - Игра "Домики"</h1>
+        <h1 class="visually-hidden">Код в Квадрате - Игра "Раскраски по фигурам"</h1>
         <div class="game__field game__field--coloring" id="coloring">
-          
+          <div class="game__figures">
+            <div class="game__figure game__figure--1">
+              <img class="game__figure-image game__figure-image--1-y" id="1-yellow" src="images/1-yellow.png" alt="">
+              <img class="game__figure-image game__figure-image--1-yb" id="1-yellow-blank" src="images/1-yellow-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--1-b" id="1-blue" src="images/1-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--1-bb" id="1-blue-blank" src="images/1-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--1-tr" id="1-top-red" src="images/1-top-red.png" alt="">
+              <img class="game__figure-image game__figure-image--1-trb" id="1-top-red-blank" src="images/1-top-red-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--1-br" id="1-bottom-red" src="images/1-bottom-red.png" alt="">
+              <img class="game__figure-image game__figure-image--1-brb" id="1-bottom-red-blank" src="images/1-bottom-red-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--1-tsr" id="1-top-side-red" src="images/1-top-side-red.png" alt="">
+              <img class="game__figure-image game__figure-image--1-tsrb" id="1-top-side-red-blank" src="images/1-top-side-red-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--1-bsr" id="1-bottom-side-red" src="images/1-bottom-side-red.png" alt="">
+              <img class="game__figure-image game__figure-image--1-bsrb" id="1-bottom-side-red-blank" src="images/1-bottom-side-red-blank.png" alt="">
+            </div>
+            <div class="game__figure game__figure--2 visually-hidden">
+              <img class="game__figure-image game__figure-image--2-b" id="2-beige" src="images/2-beige.png" alt="">
+              <img class="game__figure-image game__figure-image--2-bb" id="2-beige-blank" src="images/2-beige-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-botb" id="2-bottom-brown" src="images/2-bottom-brown.png" alt="">
+              <img class="game__figure-image game__figure-image--2-botbb" id="2-bottom-brown-blank" src="images/2-bottom-brown-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-topb" id="2-top-brown" src="images/2-top-brown.png" alt="">
+              <img class="game__figure-image game__figure-image--2-topbb" id="2-top-brown-blank" src="images/2-top-brown-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-g" id="2-green" src="images/2-green.png" alt="">
+              <img class="game__figure-image game__figure-image--2-gb" id="2-green-blank" src="images/2-green-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-lb" id="2-left-blue" src="images/2-left-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--2-lbb" id="2-left-blue-blank" src="images/2-left-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-mb" id="2-middle-blue" src="images/2-middle-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--2-mbb" id="2-middle-blue-blank" src="images/2-middle-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--2-rb" id="2-right-blue" src="images/2-right-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--2-rbb" id="2-right-blue-blank" src="images/2-right-blue-blank.png" alt="">
+            </div>
+            <div class="game__figure game__figure--3 visually-hidden">
+              <img class="game__figure-image game__figure-image--3-blb" id="3-bottom-left-blue" src="images/3-bottom-left-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-blbb" id="3-bottom-left-blue-blank" src="images/3-bottom-left-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-lb" id="3-left-blue" src="images/3-left-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-lbb" id="3-left-blue-blank" src="images/3-left-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-tlb" id="3-top-left-blue" src="images/3-top-left-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-tlbb" id="3-top-left-blue-blank" src="images/3-top-left-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-tb" id="3-top-blue" src="images/3-top-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-tbb" id="3-top-blue-blank" src="images/3-top-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-trb" id="3-top-right-blue" src="images/3-top-right-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-trbb" id="3-top-right-blue-blank" src="images/3-top-right-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-rb" id="3-right-blue" src="images/3-right-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-rbb" id="3-right-blue-blank" src="images/3-right-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-brb" id="3-bottom-right-blue" src="images/3-bottom-right-blue.png" alt="">
+              <img class="game__figure-image game__figure-image--3-brbb" id="3-bottom-right-blue-blank" src="images/3-bottom-right-blue-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-y" id="3-yellow" src="images/3-yellow.png" alt="">
+              <img class="game__figure-image game__figure-image--3-yb" id="3-yellow-blank" src="images/3-yellow-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-s" id="3-salad" src="images/3-salad.png" alt="">
+              <img class="game__figure-image game__figure-image--3-sb" id="3-salad-blank" src="images/3-salad-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-rg" id="3-right-green" src="images/3-right-green.png" alt="">
+              <img class="game__figure-image game__figure-image--3-rgb" id="3-right-green-blank" src="images/3-right-green-blank.png" alt="">
+              <img class="game__figure-image game__figure-image--3-lg" id="3-left-green" src="images/3-left-green.png" alt="">
+              <img class="game__figure-image game__figure-image--3-lgb" id="3-left-green-blank" src="images/3-left-green-blank.png" alt="">
+            </div>
+          </div>
+          <div class="game__numbers-panel game__numbers-panel--coloring">
+            <div class="game__colors game__colors--1">
+              <button class="game__figure-btn btn" id="color-sunny-yellow" data-color="sunny-yellow">
+                <img class="game__figure-img" src="images/figure-1-yellow.png" alt="Жёлтый шестиугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-red" data-color="red">
+                <img class="game__figure-img" src="images/figure-1-red.png" alt="Красный треугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-dark-blue" data-color="dark-blue">
+                <img class="game__figure-img" src="images/figure-1-blue.png" alt="Тёмно-синий круг">
+              </button>
+            </div>
+            <div class="game__colors game__colors--2 visually-hidden">
+              <button class="game__figure-btn btn" id="color-green" data-color="green">
+                <img class="game__figure-img" src="images/figure-2-green.png" alt="Зелёный треугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-beige" data-color="beige">
+                <img class="game__figure-img" src="images/figure-2-beige.png" alt="Бежевая трапеция">
+              </button>
+              <button class="game__figure-btn btn" id="color-brown" data-color="brown">
+                <img class="game__figure-img" src="images/figure-2-brown.png" alt="Коричневый прямоугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-blue" data-color="blue">
+                <img class="game__figure-img" src="images/figure-2-blue.png" alt="Синий круг">
+              </button>
+            </div>
+            <div class="game__colors game__colors--3 visually-hidden">
+              <button class="game__figure-btn btn" id="color-yellow" data-color="yellow">
+                <img class="game__figure-img" src="images/figure-3-yellow.png" alt="Жёлтый круг">
+              </button>
+              <button class="game__figure-btn btn" id="color-light-green" data-color="light-green">
+                <img class="game__figure-img" src="images/figure-3-salad.png" alt="Светло-зелёный прямоугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-light-blue" data-color="light-blue">
+                <img class="game__figure-img" src="images/figure-3-blue.png" alt="Голубой треугольник">
+              </button>
+              <button class="game__figure-btn btn" id="color-dark-green" data-color="dark-green">
+                <img class="game__figure-img" src="images/figure-3-green.png" alt="Тёмно-зелёный ромб">
+              </button>
+            </div>
+          </div>
           <div class="result visually-hidden" id="result">
             <div class="result__picture">
               <picture>
@@ -43,7 +139,7 @@
             </div>
             <div class="result__content">
               <img class="result__cat-img" src="images/cat-dialog-1.png" alt="Счастливый Рудис">
-              <p class="result__text">Весь код найден! Поздравляю!</p>bright
+              <p class="result__text">Весь код найден! Поздравляю!</p>
               <ul class="codebox">
                 <li class="codebox__item">
                   <div class="codebox__box codebox__box--bright">

@@ -97,7 +97,7 @@ const thirdDialogs = [
     sound: ""
   },
   {
-    text: "У тебя так хорошо получается!\nХочешь стать ученым в будущем?",
+    text: "У тебя так хорошо получается!\nТы всё схватываешь налету!",
     sprite: "images/cat-dialog-4.png",
     sound: ""
   }
@@ -106,17 +106,17 @@ const thirdDialogs = [
 const fourthDialogs = [
   {
     text: "Финал скоро!\nТы умничка, {name}!",
-    sprite: "images/cat-dialog-1.png",
+    sprite: "images/cat-dialog-2.png",
     sound: ""
   },
   {
     text: "Давай отдохнём и раскрасим картинки по фигурам.",
-    sprite: "images/cat-dialog-2.png",
+    sprite: "images/cat-dialog-1.png",
     sound: ""
   },
   {
     text: "Ты ведь хорошо знаешь фигуры?",
-    sprite: "images/cat-dialog-2.png",
+    sprite: "images/cat-dialog-3.png",
     sound: ""
   }
 ];
@@ -124,12 +124,12 @@ const fourthDialogs = [
 const finalDialogs = [
   {
     text: "Спасибо за игру, {name}!\nБыло очень весело!",
-    sprite: "images/cat-dialog-1.png",
+    sprite: "images/cat-dialog-2.png",
     sound: ""
   },
   {
     text: "До новых встреч, дружок!",
-    sprite: "images/cat-dialog-2.png",
+    sprite: "images/cat-dialog-1.png",
     sound: ""
   },
   {
